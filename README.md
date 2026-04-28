@@ -53,6 +53,9 @@ docker build -t my-docker-node-app:1.0 .
 
 ```bash
 docker run -d -p 3000:3000 my-docker-node-app:1.0
+
+docker run -d my-docker-node:1.0
+
 ```
 
 ---
