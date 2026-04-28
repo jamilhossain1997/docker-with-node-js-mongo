@@ -91,6 +91,8 @@ docker ps -a     # All containers
 docker images    # List images
 docker logs <container_id>
 docker logs 2877fb5545af501262f85c01a79b3c912cdc6eed1ebb037735cfd9bd6745ab22(container backend logs id )
+docker run <container id>
+
 ```
 
 ---
