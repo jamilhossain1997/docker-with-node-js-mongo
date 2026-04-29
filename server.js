@@ -20,16 +20,12 @@ app.get('/profile-picture', function (req, res) {
   res.end(img, 'binary');
 });
 
-// use when starting application locally
 let mongoUrlLocal = "mongodb://admin:password@localhost:27017/?authSource=admin";
 
-// use when starting application as docker container
 let mongoUrlDocker = "mongodb://admin:password@mongodb";
 
-// pass these options to mongo client connect request to avoid DeprecationWarning for current Server Discovery and Monitoring engine
 let mongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 
-// "user-account" in demo with docker. "my-db" in demo with docker-compose
 let databaseName = "user-account";
 
 app.post('/update-profile', async (req, res) => {
@@ -82,6 +78,7 @@ app.get('/get-profile', async (req, res) => {
     res.status(500).send({ error: "Failed to fetch profile" });
   }
 });
+
 
 app.listen(3000, function () {
   console.log("app listening on port 3000!");
