@@ -30,7 +30,7 @@ let databaseName = "user-account";
 
 app.post('/update-profile', async (req, res) => {
   try {
-    const client = await MongoClient.connect(mongoUrlLocal);
+    const client = await MongoClient.connect(mongoUrlDocker);
     const db = client.db(databaseName);
 
     const userObj = {
@@ -64,7 +64,7 @@ app.post('/update-profile', async (req, res) => {
 
 app.get('/get-profile', async (req, res) => {
   try {
-    const client = await MongoClient.connect(mongoUrlLocal);
+    const client = await MongoClient.connect(mongoUrlDocker);
     const db = client.db(databaseName);
 
     const user = await db.collection("users").findOne({ userid: 1 });

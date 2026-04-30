@@ -1,6 +1,10 @@
 version: '3'
 
 services:
+  node-js-my-app:
+    image: 637423569811.dkr.ecr.us-east-1.amazonaws.com/node-js-my-app:1.1
+    ports:
+      - "3000:3000"
   mongodb:
     image: mongo
     ports:
